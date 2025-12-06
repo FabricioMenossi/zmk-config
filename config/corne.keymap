@@ -66,7 +66,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp UP    &kp PG_UP  &msc SCRL_UP    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &msc SCRL_DOWN  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp DOWN  &kp PG_DN  &kp ESC         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp DOWN  &kp PG_DN  &trans          &trans  &trans
                         &trans  &trans  &trans    &trans    &trans    &trans
             >;
 
@@ -77,7 +77,7 @@
             bindings = <
 &trans  &trans  &trans  &trans       &trans  &trans    &kp N7  &kp N8      &kp N9  &kp STAR  &kp FSLH   &trans
 &trans  &trans  &trans  &trans       &trans  &trans    &kp N4  &kp N5      &kp N6  &kp PLUS  &kp MINUS  &kp RIGHT_ALT
-&trans  &trans  &trans  &trans       &trans  &trans    &kp N1  &kp N2      &kp N3  &kp LPAR  &kp RPAR   &kp EQUAL
+&trans  &trans  &trans  &trans       &trans  &trans    &kp N1  &kp N2      &kp N3  &trans    &trans     &kp EQUAL
                         &lt 2 MINUS  &to 0   &trans    &trans  &kp K_CALC  &kp N0
             >;
 

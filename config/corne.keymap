@@ -44,10 +44,10 @@
 
         symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp AMPS    &kp ASTRK    &kp EQUAL  &kp LPAR  &kp RPAR  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DOLLAR  &kp PERCENT  &kp CARET  &kp LBKT  &kp RBKT  &mt BACKSLASH PIPE
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCL    &kp AT       &kp HASH   &kp LBRC  &kp RBRC  &trans
-                        &trans  &trans  &trans    &trans      &trans       &kp CARET
+&kp RA(N1)  &kp RA(N2)  &kp RA(N3)  &kp RA(N4)  &kp RA(N5)  &kp RA(N6)    &kp AMPS    &kp ASTRK    &none      &kp LPAR  &kp RPAR  &trans
+&trans      &trans      &trans      &trans      &trans      &trans        &kp DOLLAR  &kp PERCENT  &kp CARET  &kp LBKT  &kp RBKT  &mt BACKSLASH PIPE
+&trans      &trans      &trans      &trans      &trans      &trans        &kp EXCL    &kp AT       &kp HASH   &kp LBRC  &kp RBRC  &kp EQUAL
+                                    &trans      &trans      &trans        &trans      &trans       &kp CARET
             >;
 
             label = "Symbols";
@@ -57,7 +57,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp UP    &kp PG_UP  &msc SCRL_UP    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &msc SCRL_DOWN  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &trans    &kp PG_DN  &kp ESC         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp DOWN  &kp PG_DN  &kp ESC         &trans  &trans
                         &trans  &trans  &trans    &trans    &trans    &trans
             >;
 
@@ -66,10 +66,10 @@
 
         numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N7  &kp N8  &kp N9  &kp STAR  &kp FSLH   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N1  &kp N2  &kp N3  &kp LPAR  &kp RPAR   &trans
-                        &trans  &to 0   &trans    &trans  &trans  &kp N0
+&trans  &trans  &trans  &trans       &trans  &trans    &kp N7  &kp N8      &kp N9  &kp STAR  &kp FSLH   &trans
+&trans  &trans  &trans  &trans       &trans  &trans    &kp N4  &kp N5      &kp N6  &kp PLUS  &kp MINUS  &kp RIGHT_ALT
+&trans  &trans  &trans  &trans       &trans  &trans    &kp N1  &kp N2      &kp N3  &kp LPAR  &kp RPAR   &kp EQUAL
+                        &lt 2 MINUS  &to 0   &trans    &trans  &kp K_CALC  &kp N0
             >;
 
             label = "Numbers";
@@ -86,7 +86,7 @@
 
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7   &kp F8     &kp F9     &kp F10   &kp F11  &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans   &kp RSHFT  &kp LCTRL  &kp LALT  &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans   &kp RSHFT  &kp LCTRL  &kp LALT  &trans   &kp INSERT
 &trans      &trans        &trans        &trans        &trans        &trans          &trans   &trans     &trans     &trans    &trans   &trans
                                         &trans        &trans        &trans          &kp RET  &trans     &trans
             >;

@@ -12,6 +12,10 @@
     keymap {
         compatible = "zmk,keymap";
 
+        &mt {
+            tapping-term-ms = <400>;  // tempo em ms para diferenciar tap de hold
+        };
+
         default_layer {
             display-name = "Default Layer";
 

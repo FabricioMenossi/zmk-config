@@ -14,7 +14,7 @@
         compatible = "zmk,combos";
 
         FunctionsLayer {
-            bindings = <&sl 4>;
+            bindings = <&sl 3>;
             key-positions = <40 41>;
         };
     };
@@ -22,9 +22,16 @@
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
+            label = "Tap Dance 0";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
+        };
+
+        td1: td1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Tap Dance 1";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&to 2>;
         };
     };
 
@@ -45,7 +52,7 @@
 &kp ESC  &kp Q  &kp W       &kp E        &kp R        &kp T             &kp Y            &kp U        &kp I        &kp O       &kp P     &kp BSPC
 &kp TAB  &kp A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &mt LEFT_WIN G    &mt RIGHT_WIN H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &kp SQT   &kp SLASH
 &td0     &kp Z  &kp X       &kp C        &kp V        &kp B             &kp N            &kp M        &kp COMMA    &kp DOT     &kp SEMI  &kp DEL
-                            &lt 2 MINUS  &mo 1        &kp SPACE         &kp ENTER        &to 3        &kp TILDE
+                            &lt 4 MINUS  &mo 1        &kp SPACE         &kp ENTER        &td1         &kp TILDE
             >;
 
             label = "DEFAULT";
@@ -62,23 +69,12 @@
             label = "Symbols";
         };
 
-        navigation {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp UP    &kp PG_UP  &msc SCRL_UP    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &msc SCRL_DOWN  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp DOWN  &kp PG_DN  &trans          &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans    &trans
-            >;
-
-            label = "Navigation";
-        };
-
         numbers {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp N7  &kp N8  &kp N9  &kp STAR   &kp FSLH    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp N4  &kp N5  &kp N6  &kp PLUS   &kp MINUS   &kp EQUAL
 &trans  &trans  &trans  &trans  &trans  &trans    &kp N1  &kp N2  &kp N3  &kp COMMA  &kp PERIOD  &trans
-                        &tog 2  &to 0   &trans    &trans  &to 0   &kp N0
+                        &mo 4   &to 0   &trans    &trans  &tog 2  &kp N0
             >;
 
             label = "Numbers";
@@ -94,11 +90,22 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7   &kp F8     &kp F9     &kp F10   &kp F11  &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans   &kp RSHFT  &kp LCTRL  &kp LALT  &trans   &kp INSERT
-&trans      &trans        &trans        &trans        &trans        &trans          &trans   &trans     &trans     &trans    &trans   &trans
-                                        &trans        &trans        &trans          &kp RET  &trans     &trans
+&kp F1      &kp F2          &kp F3        &kp F4        &kp F5        &kp F6          &kp F7   &kp F8     &kp F9     &kp F10   &kp F11  &kp F12
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans   &kp RSHFT  &kp LCTRL  &kp LALT  &trans   &kp INSERT
+&trans      &studio_unlock  &trans        &trans        &trans        &trans          &trans   &trans     &trans     &trans    &trans   &trans
+                                          &trans        &trans        &trans          &kp RET  &trans     &trans
             >;
+        };
+
+        navigation {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp UP    &kp PG_UP  &msc SCRL_UP    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &msc SCRL_DOWN  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp DOWN  &kp PG_DN  &trans          &trans  &trans
+                        &trans  &trans  &trans    &trans    &trans    &trans
+            >;
+
+            label = "Navigation";
         };
     };
 };

@@ -75,10 +75,10 @@
 
         numbers {
             bindings = <
-&trans  &trans  &trans  &trans       &trans  &trans    &kp N7  &kp N8      &kp N9  &kp STAR  &kp FSLH   &trans
-&trans  &trans  &trans  &trans       &trans  &trans    &kp N4  &kp N5      &kp N6  &kp PLUS  &kp MINUS  &kp RIGHT_ALT
-&trans  &trans  &trans  &trans       &trans  &trans    &kp N1  &kp N2      &kp N3  &trans    &trans     &kp EQUAL
-                        &lt 2 MINUS  &to 0   &trans    &trans  &kp K_CALC  &kp N0
+&trans  &trans  &trans  &trans  &trans  &trans    &kp N7  &kp N8  &kp N9  &kp STAR  &kp FSLH   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp N1  &kp N2  &kp N3  &trans    &trans     &trans
+                        &trans  &to 0   &trans    &trans  &to 0   &kp N0
             >;
 
             label = "Numbers";

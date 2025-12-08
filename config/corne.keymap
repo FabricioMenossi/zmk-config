@@ -53,7 +53,7 @@
 &kp ESC  &kp Q  &kp W       &kp E        &kp R        &kp T             &kp Y            &kp U        &kp I        &kp O       &kp P     &kp BSPC
 &kp TAB  &kp A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &mt LEFT_WIN G    &mt RIGHT_WIN H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &kp SQT   &kp SLASH
 &td0     &kp Z  &kp X       &kp C        &kp V        &kp B             &kp N            &kp M        &kp COMMA    &kp DOT     &kp SEMI  &kp DEL
-                            &lt 4 MINUS  &mo 1        &kp SPACE         &kp ENTER        &td1         &kp TILDE
+                            &lt 4 GRAVE  &mo 1        &kp SPACE         &kp ENTER        &td1         &kp MINUS
             >;
 
             label = "DEFAULT";
@@ -61,10 +61,10 @@
 
         symbols {
             bindings = <
-&kp RA(N1)  &kp RA(N2)  &kp RA(N3)  &kp RA(N4)  &kp RA(N5)  &kp RA(N6)    &kp AMPS    &kp ASTRK    &none      &kp LPAR  &kp RPAR  &trans
+&kp RA(N1)  &kp RA(N2)  &kp RA(N3)  &kp RA(N4)  &kp RA(N5)  &kp RA(N6)    &kp AMPS    &kp ASTRK    &kp TILDE  &kp LPAR  &kp RPAR  &trans
 &trans      &trans      &trans      &trans      &trans      &trans        &kp DOLLAR  &kp PERCENT  &kp CARET  &kp LBKT  &kp RBKT  &mt BACKSLASH PIPE
 &trans      &trans      &trans      &trans      &trans      &trans        &kp EXCL    &kp AT       &kp HASH   &kp LBRC  &kp RBRC  &kp EQUAL
-                                    &trans      &trans      &trans        &trans      &trans       &kp CARET
+                                    &trans      &trans      &trans        &trans      &trans       &trans
             >;
 
             label = "Symbols";

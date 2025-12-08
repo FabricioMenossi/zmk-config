@@ -25,7 +25,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance 0";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
+            bindings = <&kp LCTRL>, <&caps_word>, <&kp CAPSLOCK>;
         };
 
         td1: td1 {

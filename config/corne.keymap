@@ -61,10 +61,10 @@
 
         symbols {
             bindings = <
-&kp RA(N1)  &kp RA(N2)  &kp RA(N3)  &kp RA(N4)  &kp RA(N5)  &kp RA(N6)    &kp AMPS    &kp ASTRK    &kp TILDE  &kp LPAR  &kp RPAR  &trans
-&trans      &trans      &trans      &trans      &trans      &trans        &kp DOLLAR  &kp PERCENT  &kp CARET  &kp LBKT  &kp RBKT  &mt BACKSLASH PIPE
-&trans      &trans      &trans      &trans      &trans      &trans        &kp EXCL    &kp AT       &kp HASH   &kp LBRC  &kp RBRC  &kp EQUAL
-                                    &trans      &trans      &trans        &trans      &trans       &trans
+&trans  &kp RA(NUMBER_1)  &kp RA(NUMBER_2)  &kp RA(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(N5)    &kp RA(NUMBER_6)  &trans    &kp CARET  &trans  &kp LPAR  &kp RPAR
+&trans  &kp EXCL          &kp AT            &kp HASH          &kp DLLR          &kp PRCNT     &kp CARET         &kp AMPS  &kp TILDE  &trans  &kp LBKT  &kp RBKT
+&trans  &mt BSLH PIPE     &trans            &trans            &trans            &trans        &trans            &trans    &trans     &trans  &kp LBRC  &kp RBRC
+                                            &trans            &trans            &trans        &trans            &trans    &trans
             >;
 
             label = "Symbols";
@@ -72,9 +72,9 @@
 
         numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N7  &kp N8  &kp N9  &kp STAR   &kp FSLH    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N4  &kp N5  &kp N6  &kp PLUS   &kp MINUS   &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N1  &kp N2  &kp N3  &kp COMMA  &kp PERIOD  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &kp ASTRK  &kp FSLH
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp MINUS
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &kp COMMA  &kp EQUAL
                         &mo 4   &to 0   &trans    &trans  &tog 2  &kp N0
             >;
 
@@ -100,10 +100,10 @@
 
         navigation {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp UP    &kp PG_UP  &msc SCRL_UP    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &msc SCRL_DOWN  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp DOWN  &kp PG_DN  &trans          &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp UP    &kp PG_UP  &msc SCRL_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &msc SCRL_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp END   &kp DOWN  &kp PG_DN  &trans          &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
 
             label = "Navigation";

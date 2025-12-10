@@ -39,6 +39,11 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&to 2>;
         };
+        studio_unlock: studio_unlock {
+            compatible = "zmk,behavior-studio-unlock";
+            label = "STUDIO_UNLOCK";
+            #binding-cells = <0>;
+        };        
     };
 
     keymap {

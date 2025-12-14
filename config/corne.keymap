@@ -20,9 +20,15 @@
             key-positions = <40 41>;
         };
 
-        oled_toggle {
-            bindings = <&ext_power EP_TOG>;
+        oled_off {
+            bindings = <&ext_power EP_OFF>;
             key-positions = <0 11>;
+            timeout-ms = <100>;
+        };
+
+        oled_on {
+            bindings = <&ext_power EP_ON>;
+            key-positions = <1 0>;  // SHIFT (1) + ESC (0)
             timeout-ms = <100>;
         };
     };

@@ -23,7 +23,7 @@
         oled_toggle {
             bindings = <&ext_power EP_TOG>;
             key-positions = <0 11>;
-            timeout-ms = <50>;
+            timeout-ms = <100>;
         };
     };
 
@@ -39,8 +39,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance 1";
             #binding-cells = <0>;
-            // bindings = <&mo 2>, <&to 2>;  // Versão original: tranca no layer
-            bindings = <&mo 2>, <&sl 2>;  // Nova versão: sticky layer - sai ao pressionar tecla não-transparente
+            bindings = <&mo 2>, <&to 2>;  // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
         };
 
         studio_unlock: studio_unlock {

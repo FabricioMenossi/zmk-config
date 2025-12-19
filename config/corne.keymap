@@ -46,15 +46,13 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance 1";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&to 2>;
-  // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
+            bindings = <&mo 2>, <&to 2>; // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
         };
-
-        studio_unlock: studio_unlock {
-            compatible = "zmk,behavior-studio-unlock";
-            label = "STUDIO_UNLOCK";
-            #binding-cells = <0>;
-        };
+        // studio_unlock: studio_unlock {
+        //     compatible = "zmk,behavior-studio-unlock";
+        //     label = "STUDIO_UNLOCK";
+        //     #binding-cells = <0>;
+        // };
     };
 
     keymap {

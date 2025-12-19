@@ -46,7 +46,8 @@
             label = "Tap Dance 1";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&to 2>;
- // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
+
+            // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
         };
 
         // studio_unlock: studio_unlock {
@@ -95,7 +96,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTRK  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp C_AL_CALC
 &trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA  &trans
-                        &mo 4   &to 0   &trans    &trans     &tog 2           &kp N0
+                        &tog 2  &to 0   &trans    &trans     &mo 4            &kp N0
             >;
 
             label = "Numbers";

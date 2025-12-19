@@ -96,7 +96,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTRK  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp C_AL_CALC
 &trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp COMMA  &trans
-                        &tog 2  &to 0   &trans    &trans     &mo 4            &kp N0
+                        &tog 2  &to 0   &trans    &trans     &mo 4            &kp KP_NUMBER_0
             >;
 
             label = "Numbers";

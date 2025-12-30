@@ -1,0 +1,6 @@
+./Docs
+Notes.md
+*.log
+temp/
+.DS_Store
+Docs/*

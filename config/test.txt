@@ -1,2 +1,0 @@
-camel "faca"
-'agora pode ser'

@@ -31,18 +31,18 @@
             timeout-ms = <100>;
         };
 
-        // Caracteres ordinários na layer números
+        // Caracteres ordinários na layer números (versão simplificada)
         ord_feminine {
-            bindings = <&ord_fem>;             // ª
-            key-positions = <13>;               // tecla 'a'
-            layers = <2>;                       // só na layer números
+            bindings = <&ord_fem>;
+            key-positions = <13>;  // tecla 'a'
+            layers = <2>;          // só na layer números
             timeout-ms = <50>;
         };
 
         ord_masculine {
-            bindings = <&ord_masc>;            // º  
-            key-positions = <1>;                // tecla 'q'
-            layers = <2>;                       // só na layer números
+            bindings = <&ord_masc>;
+            key-positions = <1>;   // tecla 'q'  
+            layers = <2>;          // só na layer números
             timeout-ms = <50>;
         };
     };
@@ -53,9 +53,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "CAPS_WORD_BR";
             #binding-cells = <0>;
-            continue-list = <UNDERSCORE BACKSPACE DELETE 
-                           GRAVE TILDE ACUTE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
-                           SEMICOLON SQT COMMA DOT SLASH LBKT RBKT>;
+            continue-list = <UNDERSCORE BACKSPACE DELETE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
         };
 
         td0: td0 {
@@ -74,23 +72,17 @@
             // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
         };
 
-        // Macros para caracteres ordinários
+        // Macros para caracteres ordinários (versão simplificada)
         ord_fem: ord_fem {
             compatible = "zmk,behavior-macro";
-            label = "ORD_FEMININE";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>
-                      , <&macro_tap &kp N1 &kp N6 &kp N6>
-                      , <&macro_release &kp LALT>;
+            bindings = <&kp RA(N1) &kp RA(N6) &kp RA(N6)>;  // Alt+166
         };
 
         ord_masc: ord_masc {
-            compatible = "zmk,behavior-macro";
-            label = "ORD_MASCULINE";
+            compatible = "zmk,behavior-macro"; 
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>
-                      , <&macro_tap &kp N1 &kp N6 &kp N7>
-                      , <&macro_release &kp LALT>;
+            bindings = <&kp RA(N1) &kp RA(N6) &kp RA(N7)>;  // Alt+167
         };
 
         // studio_unlock: studio_unlock {

@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap Dance 0";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp CAPSLOCK>, <&caps_word_br>;
+            bindings = <&kp LCTRL>, <&caps_word_br>, <&kp CAPSLOCK>;
             // Um toque: Control, Dois toques: Caps temporário com acentos, Três toques: CAPSLOCK
         };
 
@@ -74,17 +74,21 @@
             // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
         };
 
-        // Macros para caracteres ordinários (versão simplificada)
+        // Macros para caracteres ordinários (versão corrigida)
         ord_fem: ord_fem {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(N1) &kp RA(N6) &kp RA(N6)>;  // Alt+166
+            bindings = <&macro_press &kp LALT>
+                      , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N6>
+                      , <&macro_release &kp LALT>;
         };
 
         ord_masc: ord_masc {
             compatible = "zmk,behavior-macro"; 
             #binding-cells = <0>;
-            bindings = <&kp RA(N1) &kp RA(N6) &kp RA(N7)>;  // Alt+167
+            bindings = <&macro_press &kp LALT>
+                      , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N7>
+                      , <&macro_release &kp LALT>;
         };
 
         // studio_unlock: studio_unlock {
@@ -142,13 +146,13 @@
             bindings = <
 // ┌────────────┬────────────┬────────────┬────────────┬────────────┬────────────┐┌────────────┬────────────┬────────────┬────────────┬────────────┬────────────┐
 // │            │            │            │            │            │            ││ 7          │ 8          │ 9          │ 0          │            │ ◄-         │
-     &trans       &trans       &trans       &trans       &trans       &trans        &kp N7       &kp N8       &kp N9       &kp N0       &none        &trans
+     &trans       &trans       &trans       &trans       &trans       &trans        &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_N0    &none        &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │            │            │            │            │            ││ 4          │ 5          │ 6          │ +          │ *          │ / ?        │
-     &trans       &trans       &trans       &trans       &trans       &trans        &kp N4       &kp N5       &kp N6       &kp PLUS     &kp ASTRK    &trans
+     &trans       &trans       &trans       &trans       &trans       &trans        &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp PLUS     &kp ASTRK    &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │            │            │            │            │            ││ 1          │ 2          │ 3          │ ,          │ =          │ DELETE     │
-     &trans       &trans       &trans       &trans       &trans       &trans        &kp N1       &kp N2       &kp N3       &kp COMMA    &kp EQUAL    &trans
+     &trans       &trans       &trans       &trans       &trans       &trans        &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp COMMA    &kp EQUAL    &trans
 // └────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┴────────────┴────────────┘
 //                                        │ Toggle Num │ Go home    │            ││ ENTER      │ Moment Nav.│ -          │
                                             &tog 2       &to 0        &trans        &trans       &mo 4        &kp MINUS

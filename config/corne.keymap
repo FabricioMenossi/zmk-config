@@ -49,7 +49,7 @@
     };
 
     behaviors {
-        // Caps Word customizado para permitir acentuação
+        // Caps Word temporário e customizado para permitir acentuação
         caps_word_br: caps_word_br {
             compatible = "zmk,behavior-caps-word";
             label = "CAPS_WORD_BR";

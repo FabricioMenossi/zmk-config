@@ -185,11 +185,11 @@
         navigation {
             bindings = <
 // ┌────────────┬────────────┬────────────┬────────────┬────────────┬────────────┐┌────────────┬────────────┬────────────┬────────────┬──────────────┬────────────┐
-// │            │            │ ↑          │            │            │            ││ --         │ HOME       │ ↑          │ ▲          │ --           │            │
-     &trans       &trans       &kp UP       &trans       &trans       &trans        &none        &kp HOME     &kp UP       &kp PG_UP    &none           &trans
+// │            │            │            │            │            │            ││ --         │ HOME       │ ↑          │ ▲          │ --           │            │
+     &trans       &trans       &trans       &trans       &trans       &trans        &none        &kp HOME     &kp UP       &kp PG_UP    &none           &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┼──────────────┼────────────┤
-// │            │ ←          │ ↓          │ →          │            │            ││ --         │ ←          │ ↓          │ →          │ --           │            │
-     &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans       &trans        &none        &kp LEFT     &kp DOWN     &kp RIGHT    &none           &trans
+// │            │            │            │            │            │            ││ --         │ ←          │ ↓          │ →          │ --           │            │
+     &trans       &trans       &trans       &trans       &trans       &trans        &none        &kp LEFT     &kp DOWN     &kp RIGHT    &none           &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┼──────────────┼────────────┤
 // │            │            │            │            │            │            ││ --         │ END        │ ↓          │ ▼          │ --           │            │
      &trans       &trans       &trans       &trans       &trans       &trans        &none        &kp END      &kp DOWN     &kp PG_DN    &none          &trans

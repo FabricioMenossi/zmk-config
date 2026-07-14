@@ -2,7 +2,7 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
- */
+ */ 
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -74,6 +74,14 @@
             // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
         };
 
+        td2: td2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Tap Dance 2";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&to 2>;
+            // Um toque: hold layer 2, Dois toques: tranca no layer 2 até &to 0
+        };
+
         // Macros para caracteres ordinários (versão corrigida)
         ord_fem: ord_fem {
             compatible = "zmk,behavior-macro";
@@ -139,14 +147,14 @@
 //                                        └────────────┴────────────┴────────────┘└────────────┴────────────┴────────────┘
             >;
 
-            label = "Symbols";
+          label = "Symbols";
         };
 
         numbers {
             bindings = <
 // ┌────────────┬────────────┬────────────┬────────────┬────────────┬────────────┐┌────────────┬────────────┬────────────┬────────────┬────────────┬────────────┐
 // │            │            │            │            │            │            ││ 7          │ 8          │ 9          │ 0          │ *          │ ◄-         │
-     &trans       &trans       &trans       &trans       &trans       &trans        &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_N0    &kp ASTRK    &trans
+     &trans       &trans       &trans       &trans       &trans       &kp INS       &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_N0    &kp ASTRK    &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // │            │            │            │            │            │            ││ 4          │ 5          │ 6          │ +          │ -          │ / ?        │
      &trans       &trans       &trans       &trans       &trans       &trans        &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp PLUS     &kp MINUS    &trans
@@ -200,6 +208,26 @@
             >;
 
             label = "Navigation";
+        };
+        
+        password {
+            bindings = <
+// ┌────────────┬────────────┬────────────┬────────────┬────────────┬────────────┐┌────────────┬────────────┬────────────┬────────────┬──────────────┬────────────┐
+// │            │            │            │            │            │            ││            │            │            │            │              │            │
+     &trans       &trans       &trans       &kp KP_N3    &trans       &trans        &trans       &kp KP_N8    &kp KP_N1    &kp KP_N0    &trans         &trans
+// ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┼──────────────┼────────────┤
+// │            │            │            │            │            │            ││            │            │            │            │              │            │
+     &kp KP_N4    &trans       &trans       &trans       &trans       &trans        &trans       &trans       &trans       &trans       &trans         &trans
+// ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┼──────────────┼────────────┤
+// │            │            │            │            │            │            ││            │            │            │            │              │            │
+     &trans       &trans       &trans       &trans       &trans       &trans        &trans       &trans       &trans       &trans       &trans         &trans
+// └────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤├────────────┼────────────┼────────────┼────────────┴──────────────┴────────────┘
+//                                        │            │            │            ││            │            │            │
+                                            &trans       &trans       &trans        &trans       &trans       &trans
+//                                        └────────────┴────────────┴────────────┘└────────────┴────────────┴────────────┘
+            >;
+
+            label = "Password";
         };
     };
 };
